@@ -2,7 +2,6 @@
 
 import type { Metadata } from "next";
 import { Providers } from "./providers";
-import { RecoilRoot } from "recoil";
 
 export const metadata: Metadata = {
   title: "My Reddit App",
@@ -17,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" ">
-        <RecoilRoot>
           <Providers>{children}</Providers>
-        </RecoilRoot>
       </body>
     </html>
   );
