@@ -1,7 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
-import "@fontsource/open-sans/300.css";
-import "@fontsource/open-sans/400.css";
-import "@fontsource/open-sans/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/800.css";
 
 // 2. Extend the theme to include custom colors, fonts, etc
 export const theme = extendTheme({
@@ -11,15 +13,14 @@ export const theme = extendTheme({
     },
   },
   fonts: {
-    body: "open Sans, sans-serif",
+    body: "Inter, sans-serif",
   },
   styles: {
     global: () => ({
       body: {
-        bg:'gray.200'
-      }
+        bg: "#e2e8f0",
 
-    })
+      },
+    }),
   },
-
 });
