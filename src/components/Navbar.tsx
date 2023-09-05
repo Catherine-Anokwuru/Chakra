@@ -17,13 +17,20 @@ import {
   FaGithub,
   FaHeart,
   FaMoon,
-  FaSearch,
   FaYoutube,
 } from "react-icons/fa";
 
 const Navbar: React.FC = () => {
+
   return (
-    <Box h={"4.5rem"} zIndex={10} bg={"white"} w={"100%"}>
+    <Box
+      id="nav"
+      className="navbar"
+      h={"4.5rem"}
+      zIndex={10}
+      bg={"white"}
+      w={"100%"}
+    >
       <Flex
         alignItems={"center"}
         justifyContent={"space-between"}
@@ -31,6 +38,7 @@ const Navbar: React.FC = () => {
         height={"100%"}
         px={"1.5rem"}
         maxW={"90rem"}
+        mx={"auto"}
       >
         <Box minW={"3rem"} display={"inline-block"}>
           <Link>
@@ -134,8 +142,10 @@ const Navbar: React.FC = () => {
               display={{ base: "none", md: "flex" }}
               h={"fit-content"}
               w={"auto"}
+              flexShrink={0}
             >
-              <Select
+              <Select defaultValue={'v2.8.0'}
+                aria-label="Select the Chakra UI Docs version. You're currently viewing the version v2.8.0 docs"
                 variant="unstyled"
                 fontSize={"1rem"}
                 border={"none"}
@@ -144,8 +154,9 @@ const Navbar: React.FC = () => {
                 mr={"0.75rem"}
                 fontWeight={600}
                 h={"auto"}
+                w={"100%"}
               >
-                <option value="https://chakra-ui.com" selected>
+                <option value="https://chakra-ui.com" >
                   v2.8.0
                 </option>
                 <option value="https://v1.chakra-ui.com">
@@ -199,17 +210,32 @@ const Navbar: React.FC = () => {
               gap={{ base: "0rem", lg: "1.25rem" }}
             >
               <Button
-                h={"2.5rem"}
-                w={"2.5rem"}
                 px={"1rem"}
-                fontSize={"1.125rem"}
                 bg={"transparent"}
                 border={"none"}
                 alignItems={"center"}
+                ml={{ md: "0.5rem", lg: "0.75rem" }}
+                h={{ lg: "1.125rem" }}
+                outlineOffset={"2px"}
+                outline={"2px"}
               >
-                <FaMoon color={"#a0aec0"} />
+                <FaMoon
+                  color={"#a0aec0"}
+                  style={{
+                    fontSize: "1.25rem",
+                    height: "1em",
+                    width: "1em",
+                  }}
+                />
               </Button>
-              <Button ml={"0.5rem"} h={"1.125rem"} >
+              <Button
+                variant="ghost"
+                display={{ md: "none" }}
+                h={"2.5rem"}
+                outlineOffset={"2px"}
+                outlineColor={"transparent"}
+                verticalAlign={"middle"}
+              >
                 <FaBars />
               </Button>
               <Link
@@ -230,10 +256,11 @@ const Navbar: React.FC = () => {
                   color={"#E53E3E"}
                   w={"1rem"}
                   h={"1rem"}
-                  mr={"0.5rem"}
-                  lineHeight={"1rem"}
+                  lineheight={"1rem"}
                 />
-                <strong>Sponsor</strong>
+                <strong style={{ marginLeft: "0.5rem" }}>
+                  Sponsor
+                </strong>
               </Link>
             </Flex>
           </Flex>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Link, Text } from "@chakra-ui/react";
+import { Box, Link, Text, styled } from "@chakra-ui/react";
 import React from "react";
 
 const Banner: React.FC = () => {
