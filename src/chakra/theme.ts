@@ -4,6 +4,7 @@ import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
+import { Kbd } from "./kbd";
 
 // 2. Extend the theme to include custom colors, fonts, etc
 export const theme = extendTheme({
@@ -19,8 +20,10 @@ export const theme = extendTheme({
     global: () => ({
       body: {
         bg: "#e2e8f0",
-
       },
+    components: {
+      Kbd
+    }
     }),
   },
 });
